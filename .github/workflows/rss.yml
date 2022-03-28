@@ -9,12 +9,12 @@ jobs:
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
-          serveraddress: smtp.163.com
+          serveraddress: smtp.gmail.com
           serverport: 465
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          subject: Shanghai Weather Report
+          subject: actionsFlow测试用之rss
           body: file://result.html
-          to: yifeng.ruan@gmail.com
+          to: jun4rui@gmail.com
           from: GitHub Actions
           content_type: text/html
