@@ -6,14 +6,15 @@ jobs:
     name: Make a HTTP Request
     runs-on: ubuntu-latest
     steps:
-      - name: Make a HTTP Request
-        uses: actionsflow/axios@v1
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
         with:
-          url: https://hookb.in/VGPzxoWbdjtE22bwznzE
-          method: POST
-          body: |
-            {
-              "link":"${{ on.rss.outputs.link }}", 
-              "title": "${{ on.rss.outputs.title }}",
-              "content":"<<<${{ on.rss.outputs.contentSnippet }}>>>"
-            }
+          serveraddress: smtp.163.com
+          serverport: 465
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          subject: Shanghai Weather Report
+          body: file://result.html
+          to: yifeng.ruan@gmail.com
+          from: GitHub Actions
+          content_type: text/html
