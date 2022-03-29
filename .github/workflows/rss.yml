@@ -1,20 +1,17 @@
 on:
   rss:
-    url: https://hnrss.org/newest?points=300&count=3
+    url: https://hnrss.org/newest?points=300
 jobs:
-  request:
-    name: Make a HTTP Request
+  print:
+    name: Print
     runs-on: ubuntu-latest
     steps:
-      - name: 'Send mail'
-        uses: dawidd6/action-send-mail@master
-        with:
-          serveraddress: smtp.gmail.com
-          serverport: 465
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          subject: actionsFlow测试用之rss
-          body: file://result.html
-          to: jun4rui@gmail.com
-          from: GitHub Actions
-          content_type: text/html
+      - name: Print Outputs
+        env:
+          title: ${{on.rss.outputs.title}}
+          contentSnippet: ${{on.rss.outputs.contentSnippet}}
+          link: ${{on.rss.outputs.link}}
+        run: |
+          echo title: $title
+          echo contentSnippet: $contentSnippet
+          echo link: $link
