@@ -18,7 +18,7 @@ jobs:
           password: ${{secrets.PASSWORD}}
           subject: ${{ on.rss.outputs.title }}
           # Literal body:
-          body: ${{ on.rss.outputs.content }}
+          body: body ${{ on.rss.outputs.content }} body
           # Read file contents as body:
           to: jun4rui@gmail.com
           from: jun4rui@gmail.com # <user@example.com>
