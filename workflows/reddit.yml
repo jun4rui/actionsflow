@@ -17,7 +17,7 @@ jobs:
           password: ${{secrets.PASSWORD}}
           subject: ${{ on.reddit.outputs.title }}
           # Literal body:
-          body: body ${{ toJSON(on.reddit.outputs) }} body
+          body: ${{ on.reddit.outputs.content }}
           # Read file contents as body:
           to: jun4rui@gmail.com
           from: jun4rui@gmail.com # <user@example.com>
