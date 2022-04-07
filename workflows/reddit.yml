@@ -1,6 +1,8 @@
 on:
   reddit:
     url: https://www.reddit.com/r/news/
+    config:
+      debug: true
 jobs:
   print:
     name: Lvv2-twitter china group

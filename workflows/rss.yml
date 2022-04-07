@@ -3,6 +3,7 @@ on:
     url: https://rss.app/feeds/aejPDlFyhRV3EmpC.xml
     config:
       every: "*/10 * * * *"
+      debug: true
 jobs:
   print:
     name: Lvv2-twitter china group
