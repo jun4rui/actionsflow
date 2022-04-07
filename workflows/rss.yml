@@ -1,6 +1,11 @@
 on:
   rss:
-    url: https://lvv2.com/rss/%E6%8E%A8%E7%89%B9%E4%B8%AD%E6%96%87%E5%9C%88
+    url:
+      - https://lvv2.com/rss/%E6%8E%A8%E7%89%B9%E4%B8%AD%E6%96%87%E5%9C%88
+      - rsshub.app/twitter/user/fangshimin
+      - rsshub.app/twitter/user/TGTM_Official
+      - rsshub.app/twitter/user/willliamlong
+      - https://rsshub.app/yxdzqb/popular_cn
     config:
       every: "*/10 * * * *"
       debug: true
@@ -18,7 +23,7 @@ jobs:
           password: ${{secrets.PASSWORD}}
           subject: ${{ on.rss.outputs.title }}
           # Literal body:
-          body: ${{ on.rss.outputs.content }} <br> <a href='${{ on.rss.outputs.link }}' target='_blank'>原文链接</a>
+          body: ${{ on.rss.outputs.content }} <hr> <a href='${{ on.rss.outputs.link }}' target='_blank'>原文链接</a>
           # Read file contents as body:
           to: jun4rui@gmail.com
           from: jun4rui@gmail.com # <user@example.com>
