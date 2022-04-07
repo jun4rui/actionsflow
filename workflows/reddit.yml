@@ -11,8 +11,8 @@ jobs:
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: smtp-relay.gmail.com
-          server_port: 465
+          server_address: smtp-mail.outlook.com
+          server_port: 587
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
           subject: ${{ on.reddit.outputs.title }}
