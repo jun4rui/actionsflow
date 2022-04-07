@@ -6,31 +6,18 @@ jobs:
     name: Lvv2-twitter china group
     runs-on: ubuntu-latest
     steps:
-      - name: Print Outputs
-        env:
-          outputs: ${{ toJSON(on.rss.outputs) }}
-        run:
-          echo outputs: $outputs
-      - name: Send mail111
-        uses: dawidd6/action-send-mail@v3
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v2
         with:
-          # Required mail server address:
           server_address: smtp-relay.gmail.com
-          # Required mail server port:
           server_port: 465
-          # Optional (recommended): mail server username:
-          username: ${{secrets.USERNAME}}
-          # Optional (recommended) mail server password:
-          password: ${{secrets.PASSWORD}}
-          # Required mail subject:
-          subject: 测试 Actions flow
-          # Required recipients' addresses:
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: ${{ on.rss.outputs.title }}
+          # Literal body:
+          body: ${{ on.rss.outputs.content }}
+          # Read file contents as body:
           to: jun4rui@gmail.com
-          # Required sender full name (address can be skipped):
           from: jun4rui@gmail.com # <user@example.com>
-          # Optional whether this connection use TLS (default is true if server_port is 465)
-          secure: true
-          # Optional plain body:
-          body: Build job of ${{github.repository}} completed successfully!
-          # Optional HTML body read from file:
-          html_body: ${{github.repository}}
+          # Optional content type (defaults to text/plain):
+          content_type: text/html
