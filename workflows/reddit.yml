@@ -1,8 +1,6 @@
 on:
-  rss:
-    url: https://rss.app/feeds/aejPDlFyhRV3EmpC.xml
-    config:
-      every: "*/10 * * * *"
+  reddit:
+    url: https://www.reddit.com/r/news/
 jobs:
   print:
     name: Lvv2-twitter china group
@@ -11,13 +9,13 @@ jobs:
       - name: Send mail
         uses: dawidd6/action-send-mail@v2
         with:
-          server_address: smtp.gmail.com
+          server_address: smtp-relay.gmail.com
           server_port: 465
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
-          subject: ${{ on.rss.outputs.title }}
+          subject: ${{ on.reddit.outputs.title }}
           # Literal body:
-          body: ${{ on.rss.outputs.content }}
+          body: ${{ on.reddit.outputs.description }}
           # Read file contents as body:
           to: jun4rui@gmail.com
           from: jun4rui@gmail.com # <user@example.com>

@@ -1,17 +1,25 @@
 on:
   rss:
-    url: https://actionsflow.github.io/test-page/hn-rss.xml
+    url: https://rss.app/feeds/aejPDlFyhRV3EmpC.xml
+    config:
+      every: "*/10 * * * *"
 jobs:
   print:
-    name: Print
+    name: Lvv2-twitter china group
     runs-on: ubuntu-latest
     steps:
-      - name: Print Outputs
-        env:
-          title: ${{on.rss.outputs.title}}
-          contentSnippet: ${{on.rss.outputs.contentSnippet}}
-          link: ${{on.rss.outputs.link}}
-        run: |
-          echo title: $title
-          echo contentSnippet: $contentSnippet
-          echo link: $link
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v2
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
+          subject: ${{ on.rss.outputs.title }}
+          # Literal body:
+          body: ${{ on.rss.outputs.content }}
+          # Read file contents as body:
+          to: jun4rui@gmail.com
+          from: jun4rui@gmail.com # <user@example.com>
+          # Optional content type (defaults to text/plain):
+          content_type: text/html
