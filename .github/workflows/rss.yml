@@ -11,7 +11,7 @@ jobs:
           outputs: ${{ toJSON(on.rss.outputs) }}
         run:
           echo outputs: $outputs
-      - name: Send mail
+      - name: Send mail111
         uses: dawidd6/action-send-mail@v3
         with:
           # Required mail server address:
