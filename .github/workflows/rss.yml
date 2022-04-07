@@ -3,7 +3,7 @@ on:
     url: https://lvv2.com/rss/%E6%8E%A8%E7%89%B9%E4%B8%AD%E6%96%87%E5%9C%88
 jobs:
   print:
-    name: Lvv2-twitter china group111
+    name: Lvv2-twitter china group
     runs-on: ubuntu-latest
     steps:
       - name: Print Outputs
@@ -34,9 +34,3 @@ jobs:
           body: Build job of ${{github.repository}} completed successfully!
           # Optional HTML body read from file:
           html_body: $outputs
-          # Optional unsigned/invalid certificates allowance:
-          ignore_cert: true
-          # Optional converting Markdown to HTML (set content_type to text/html too):
-          convert_markdown: true
-          # Optional priority: 'high', 'normal' (default) or 'low'
-          priority: low
