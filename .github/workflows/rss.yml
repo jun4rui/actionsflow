@@ -1,9 +1,9 @@
 on:
   rss:
-    url: https://hnrss.org/newest?points=300&count=3
+    url: https://lvv2.com/rss/%E6%8E%A8%E7%89%B9%E4%B8%AD%E6%96%87%E5%9C%88
 jobs:
   print:
-    name: Print
+    name: Lvv2-推特中文圈RSS
     runs-on: ubuntu-latest
     steps:
       - name: Print Outputs
