@@ -1,4 +1,3 @@
-name: Send email new RSS Feed items
 on:
   rss:
     url: https://rss.app/feeds/aejPDlFyhRV3EmpC.xml
