@@ -24,7 +24,7 @@ jobs:
           # Optional content type (defaults to text/plain):
           content_type: text/html
       - name: Print Outputs
-          env:
-            outputs: ${{ toJSON(on.rss.outputs) }}
-          run:
-            echo outputs: $outputs
+        env:
+          outputs: ${{ toJSON(on.reddit.outputs) }}
+        run:
+          echo outputs: $outputs
