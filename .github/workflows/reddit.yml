@@ -2,8 +2,6 @@ name: Send email new RSS Feed items
 on:
   rss:
     url: https://rss.app/feeds/aejPDlFyhRV3EmpC.xml
-    config:
-      every: "10 * * * *"
 jobs:
   print:
     name: Lvv2-twitter china group
