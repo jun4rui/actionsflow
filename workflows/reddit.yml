@@ -23,6 +23,7 @@ jobs:
           from: jun4rui@gmail.com # <user@example.com>
           # Optional content type (defaults to text/plain):
           content_type: text/html
+          secure: true
       - name: Print Outputs
         env:
           outputs: ${{ toJSON(on.reddit.outputs) }}
