@@ -3,15 +3,11 @@ on:
     url: https://lvv2.com/rss/%E6%8E%A8%E7%89%B9%E4%B8%AD%E6%96%87%E5%9C%88
 jobs:
   print:
-    name: Lvv2-推特中文圈RSS
+    name: Lvv2-twitter china group
     runs-on: ubuntu-latest
     steps:
       - name: Print Outputs
         env:
-          title: ${{on.rss.outputs.title}}
-          contentSnippet: ${{on.rss.outputs.contentSnippet}}
-          link: ${{on.rss.outputs.link}}
+          outputs: ${{toJSON(on.rss.ooutputs)}}
         run: |
-          echo title: $title
-          echo contentSnippet: $contentSnippet
-          echo link: $link
+          echo putputs: $outputs
