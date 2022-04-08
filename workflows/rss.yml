@@ -2,9 +2,12 @@ on:
   rss:
     url:
 #      - https://lvv2.com/rss/%E6%8E%A8%E7%89%B9%E4%B8%AD%E6%96%87%E5%9C%88
-      - https://rsshub.app/twitter/user/fangshimin
-      - https://rsshub.app/twitter/user/TGTM_Official
-      - https://rsshub.app/twitter/user/willliamlong
+#      - https://rsshub.app/twitter/user/fangshimin
+#      - https://rsshub.app/twitter/user/TGTM_Official
+#      - https://rsshub.app/twitter/user/willliamlong
+      - https://nitter.net/fangshimin/rss
+      - https://nitter.net/TGTM_Official/rss
+      - https://nitter.net/willliamlong/rss
       - https://rsshub.app/yxdzqb/popular_cn
     config:
       every: "*/15 * * * *"
