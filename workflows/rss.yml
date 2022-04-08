@@ -26,7 +26,7 @@ jobs:
           password: ${{secrets.PASSWORD}}
           subject: ${{ on.rss.outputs.title }}
           # Literal body:
-          body: ${{ on.rss.outputs.title }} <hr> ${{ on.rss.outputs.content }} <hr> <a href='${{ on.rss.outputs.link }}' target='_blank'>原文链接</a>
+          body: ${{ on.rss.outputs.content }} <hr> <a href='${{ on.rss.outputs.link }}' target='_blank'>原文链接</a>
           # Read file contents as body:
           to: jun4rui@gmail.com
           from: jun4rui@gmail.com # <user@example.com>
