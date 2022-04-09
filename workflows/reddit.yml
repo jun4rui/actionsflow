@@ -1,6 +1,9 @@
 on:
   reddit:
-    url: https://www.reddit.com/r/news/
+    url:
+      - https://www.reddit.com/r/tgfc/
+      - https://www.reddit.com/r/saraba2nd/
+      - https://www.reddit.com/r/China_irl/
     config:
       debug: true
 jobs:
