@@ -19,7 +19,7 @@ jobs:
           server_port: 587
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
-          subject: ${{ on.reddit.outputs.title }}
+          subject: reddit - ${{ on.reddit.outputs.title }}
           # Literal body:
           body: ${{ on.reddit.outputs.content }}
           # Read file contents as body:
