@@ -30,7 +30,7 @@ jobs:
           body: ${{ on.rss.outputs.content }} <hr> 原文链接：<a href='${{ on.rss.outputs.link }}' target='_blank'>${{ on.rss.outputs.link }}</a>
           # Read file contents as body:
           to: jun4rui@gmail.com
-          from: jun4rui@gmail.com # <user@example.com>
+          from: jun4rui+actionsflow@gmail.com # <user@example.com>
           # Optional content type (defaults to text/plain):
           content_type: text/html
           secure: true
