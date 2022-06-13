@@ -9,7 +9,7 @@ on:
       - https://nitter.net/TGTM_Official/rss
       - https://nitter.net/willliamlong/rss
       - https://nitter.net/wstv_lizzi/rss
-      - https://rsshub.app/yxdzqb/popular_cn
+#      - https://rsshub.app/yxdzqb/popular_cn
     config:
       every: "*/15 * * * *"
       debug: false
